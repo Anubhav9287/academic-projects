@@ -1,0 +1,419 @@
+[
+    {
+        "DNAME": "Research",
+        "MANAGER_LNAME": "Wong",
+        "MGR_START_DATE": "22-May-78",
+        "EMPLOYEE": [
+            {
+                "E_LNAME": "Wong",
+                "E_FNAME": "Franklin",
+                "SALARY": "40000"
+            },
+            {
+                "E_LNAME": "Smith",
+                "E_FNAME": "John",
+                "SALARY": "30000"
+            },
+            {
+                "E_LNAME": "Narayan",
+                "E_FNAME": "Ramesh",
+                "SALARY": "38000"
+            },
+            {
+                "E_LNAME": "English",
+                "E_FNAME": "Joyce",
+                "SALARY": "25000"
+            },
+            {
+                "E_LNAME": "Morgan",
+                "E_FNAME": "Michael",
+                "SALARY": "73500"
+            },
+            {
+                "E_LNAME": "Sondrini",
+                "E_FNAME": "Andrea",
+                "SALARY": "65000"
+            },
+            {
+                "E_LNAME": "Miller",
+                "E_FNAME": "James",
+                "SALARY": "75000"
+            }
+        ]
+    },
+    {
+        "DNAME": "Administration",
+        "MANAGER_LNAME": "Wallace",
+        "MGR_START_DATE": "1-Jan-85",
+        "EMPLOYEE": [
+            {
+                "E_LNAME": "Wallace",
+                "E_FNAME": "Jennifer",
+                "SALARY": "43000"
+            },
+            {
+                "E_LNAME": "Zelaya",
+                "E_FNAME": "Alicia",
+                "SALARY": "25000"
+            },
+            {
+                "E_LNAME": "Jabbar",
+                "E_FNAME": "Ahmad",
+                "SALARY": "25000"
+            },
+            {
+                "E_LNAME": "Holmes",
+                "E_FNAME": "Wilson",
+                "SALARY": "72500"
+            },
+            {
+                "E_LNAME": "Thirteen",
+                "E_FNAME": "Cameron",
+                "SALARY": "80000"
+            },
+            {
+                "E_LNAME": "Koelbel",
+                "E_FNAME": "Richard",
+                "SALARY": "85000"
+            }
+        ]
+    },
+    {
+        "DNAME": "Headquarters",
+        "MANAGER_LNAME": "Borg",
+        "MGR_START_DATE": "19-Jun-71",
+        "EMPLOYEE": [
+            {
+                "E_LNAME": "Borg",
+                "E_FNAME": "James",
+                "SALARY": "55000"
+            },
+            {
+                "E_LNAME": "Carpenter",
+                "E_FNAME": "Jisha",
+                "SALARY": "15000"
+            }
+        ]
+    },
+    {
+        "DNAME": "Software",
+        "MANAGER_LNAME": "James",
+        "MGR_START_DATE": "15-May-99",
+        "EMPLOYEE": [
+            {
+                "E_LNAME": "James",
+                "E_FNAME": "Jared",
+                "SALARY": "85000"
+            },
+            {
+                "E_LNAME": "Jones",
+                "E_FNAME": "Jon",
+                "SALARY": "45000"
+            },
+            {
+                "E_LNAME": "Mark",
+                "E_FNAME": "Justin",
+                "SALARY": "40000"
+            },
+            {
+                "E_LNAME": "Knight",
+                "E_FNAME": "Brad",
+                "SALARY": "44000"
+            },
+            {
+                "E_LNAME": "Grace",
+                "E_FNAME": "Kim",
+                "SALARY": "79000"
+            },
+            {
+                "E_LNAME": "Chase",
+                "E_FNAME": "Jeff",
+                "SALARY": "44000"
+            },
+            {
+                "E_LNAME": "Ball",
+                "E_FNAME": "Nandita",
+                "SALARY": "62000"
+            },
+            {
+                "E_LNAME": "Ed",
+                "E_FNAME": "John",
+                "SALARY": "30000"
+            },
+            {
+                "E_LNAME": "Barbara",
+                "E_FNAME": "Jose",
+                "SALARY": "35000"
+            },
+            {
+                "E_LNAME": "Wolowitz",
+                "E_FNAME": "Penny",
+                "SALARY": "17000"
+            },
+            {
+                "E_LNAME": "Hall",
+                "E_FNAME": "Debra",
+                "SALARY": "30000"
+            },
+            {
+                "E_LNAME": "Sheen",
+                "E_FNAME": "Jake",
+                "SALARY": "52000"
+            },
+            {
+                "E_LNAME": "Burklow",
+                "E_FNAME": "Cindy",
+                "SALARY": "45000"
+            },
+            {
+                "E_LNAME": "Geller",
+                "E_FNAME": "Zach",
+                "SALARY": "55000"
+            },
+            {
+                "E_LNAME": "Yu",
+                "E_FNAME": "Alex",
+                "SALARY": "50000"
+            },
+            {
+                "E_LNAME": "Hisel",
+                "E_FNAME": "Christina",
+                "SALARY": "45000"
+            }
+        ]
+    },
+    {
+        "DNAME": "Hardware",
+        "MANAGER_LNAME": "Freed",
+        "MGR_START_DATE": "15-May-98",
+        "EMPLOYEE": [
+            {
+                "E_LNAME": "Freed",
+                "E_FNAME": "Alex",
+                "SALARY": "89000"
+            },
+            {
+                "E_LNAME": "Wallis",
+                "E_FNAME": "Evan",
+                "SALARY": "92000"
+            },
+            {
+                "E_LNAME": "Zell",
+                "E_FNAME": "Josh",
+                "SALARY": "56000"
+            },
+            {
+                "E_LNAME": "Vile",
+                "E_FNAME": "Andy",
+                "SALARY": "53000"
+            },
+            {
+                "E_LNAME": "Brand",
+                "E_FNAME": "Tom",
+                "SALARY": "62500"
+            },
+            {
+                "E_LNAME": "Vos",
+                "E_FNAME": "Jenny",
+                "SALARY": "61000"
+            },
+            {
+                "E_LNAME": "Carter",
+                "E_FNAME": "Chris",
+                "SALARY": "43000"
+            },
+            {
+                "E_LNAME": "Bays",
+                "E_FNAME": "Bonnie",
+                "SALARY": "70000"
+            },
+            {
+                "E_LNAME": "Best",
+                "E_FNAME": "Alec",
+                "SALARY": "60000"
+            },
+            {
+                "E_LNAME": "Snedden",
+                "E_FNAME": "Sam",
+                "SALARY": "48000"
+            },
+            {
+                "E_LNAME": "Laurie",
+                "E_FNAME": "Gregory",
+                "SALARY": "90000"
+            },
+            {
+                "E_LNAME": "House",
+                "E_FNAME": "Lisa",
+                "SALARY": "85000"
+            },
+            {
+                "E_LNAME": "Moody",
+                "E_FNAME": "Leonard",
+                "SALARY": "45000"
+            },
+            {
+                "E_LNAME": "Kirkish",
+                "E_FNAME": "Joseph",
+                "SALARY": "95000"
+            }
+        ]
+    },
+    {
+        "DNAME": "Sales",
+        "MANAGER_LNAME": "James",
+        "MGR_START_DATE": "1-Jan-97",
+        "EMPLOYEE": [
+            {
+                "E_LNAME": "James",
+                "E_FNAME": "John",
+                "SALARY": "81000"
+            },
+            {
+                "E_LNAME": "Bender",
+                "E_FNAME": "Bob",
+                "SALARY": "96000"
+            },
+            {
+                "E_LNAME": "King",
+                "E_FNAME": "Kate",
+                "SALARY": "44000"
+            },
+            {
+                "E_LNAME": "Leslie",
+                "E_FNAME": "Lyle",
+                "SALARY": "41000"
+            },
+            {
+                "E_LNAME": "King",
+                "E_FNAME": "Billie",
+                "SALARY": "38000"
+            },
+            {
+                "E_LNAME": "Jones",
+                "E_FNAME": "Megan",
+                "SALARY": "62000"
+            },
+            {
+                "E_LNAME": "Kramer",
+                "E_FNAME": "Jon",
+                "SALARY": "41500"
+            },
+            {
+                "E_LNAME": "Small",
+                "E_FNAME": "Gerald",
+                "SALARY": "29000"
+            },
+            {
+                "E_LNAME": "Head",
+                "E_FNAME": "Arnold",
+                "SALARY": "33000"
+            },
+            {
+                "E_LNAME": "Pataki",
+                "E_FNAME": "Helga",
+                "SALARY": "32000"
+            },
+            {
+                "E_LNAME": "Drew",
+                "E_FNAME": "Naveen",
+                "SALARY": "34000"
+            },
+            {
+                "E_LNAME": "Reedy",
+                "E_FNAME": "Carl",
+                "SALARY": "32000"
+            },
+            {
+                "E_LNAME": "Hall",
+                "E_FNAME": "Sammy",
+                "SALARY": "37000"
+            },
+            {
+                "E_LNAME": "Bacher",
+                "E_FNAME": "Red",
+                "SALARY": "33500"
+            },
+            {
+                "E_LNAME": "Lewallen",
+                "E_FNAME": "Roy",
+                "SALARY": "75500"
+            },
+            {
+                "E_LNAME": "Joy",
+                "E_FNAME": "Jennifer",
+                "SALARY": "45000"
+            },
+            {
+                "E_LNAME": "Maxfield",
+                "E_FNAME": "Erin",
+                "SALARY": "72000"
+            },
+            {
+                "E_LNAME": "Cucuou",
+                "E_FNAME": "Sheldon",
+                "SALARY": "35500"
+            }
+        ]
+    },
+    {
+        "DNAME": "HR",
+        "MANAGER_LNAME": "Linda",
+        "MGR_START_DATE": "1-Feb-89",
+        "EMPLOYEE": [
+            {
+                "E_LNAME": "Jarvis",
+                "E_FNAME": "Jill",
+                "SALARY": "36000"
+            },
+            {
+                "E_LNAME": "King",
+                "E_FNAME": "Ray",
+                "SALARY": "44500"
+            },
+            {
+                "E_LNAME": "Ted",
+                "E_FNAME": "Kim",
+                "SALARY": "50000"
+            },
+            {
+                "E_LNAME": "Linda",
+                "E_FNAME": "Juan",
+                "SALARY": "55000"
+            },
+            {
+                "E_LNAME": "Mary",
+                "E_FNAME": "willie",
+                "SALARY": "12000"
+            },
+            {
+                "E_LNAME": "Smith",
+                "E_FNAME": "Johny",
+                "SALARY": "65000"
+            },
+            {
+                "E_LNAME": "Liang",
+                "E_FNAME": "Percy",
+                "SALARY": "55000"
+            }
+        ]
+    },
+    {
+        "DNAME": "Networking",
+        "MANAGER_LNAME": "Gupta",
+        "MGR_START_DATE": "15-May-09",
+        "EMPLOYEE": [
+            {
+                "E_LNAME": "Gupta",
+                "E_FNAME": "Sunil",
+                "SALARY": "80000"
+            }
+        ]
+    },
+    {
+        "DNAME": "QA",
+        "MANAGER_LNAME": "Kirkish",
+        "MGR_START_DATE": "2-Feb-10",
+        "EMPLOYEE": []
+    }
+]
