@@ -1,4 +1,4 @@
-# academic-projects
+# Academic-Projects
 These are CSE Projects for Different Subjects
 1. Neural Networks: (CSE-5368)
    This Subject deals with Theoretical principles of neurocomputing. Learning algorithms, information capacity, and mapping properties of feedforward and recurrent networks. 
