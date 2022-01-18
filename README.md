@@ -20,3 +20,8 @@ These are CSE Projects for Different Subjects
    • Heap Sort
    • Quick Sort
    • Quick Sort - Using 3 medians
+4. WEB DATA MANAGEMENT: CSE-5335
+   This is a full stack project for housing system. (Laravel, PHP)
+   The purpose of this project is to create a site which manages, controls and monitors a subdivision of buildings where each building has several apartments, and each apartment has a responsible contact/owner. The site provides access to three dashboards which  work  on  three  different  levels  i.e.,  Subdivision,  Building  and  Apartment. Authorized  respective  persons  can  generate  the  corresponding  report  of  apartment, building  or  subdivision  for their  service  consumption.  The  portal  not  only  helps  the person monitor their service consumption but also provides a detailed report (including 
+public and private services).
+   There live chat option given to user and owers to chat. 
