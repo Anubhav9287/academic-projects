@@ -1,0 +1,60 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block navbar %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ url_for('index') }}">Home</a>
+            </div>
+        </div>
+    </nav>
+
+<style>
+  body{background-color: rgb(247, 245, 242);}
+</style>
+
+<head>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+   google.charts.load('current', {
+  callback: function () {
+    var data = new google.visualization.arrayToDataTable({{ out| safe}});
+
+    var container = document.getElementById('chart');
+    var chart = new google.visualization.PieChart(container);
+    chart.draw(data, {
+      width: 600,
+      height: 300,
+      series: {
+        1: {
+          targetAxisIndex: 1,
+        }
+      },
+      theme: 'material',
+      hAxes: {
+        0: {
+          ticks:[0, 0.004, 0.008, 0.012,0.016,0.020,0.024,0.028,0.032,0.036,0.040,0.044, 0.048],
+          // dtick:[2.2],
+          title: 'Execution Time(Seconds)'
+        }
+      }
+    });
+  },
+  packages: ['corechart']
+});
+  </script>
+</head>
+<body>
+  <div class="mb-3">
+    <div id="chart" ></div>
+  <form method ="POST" action="/clearall" enctype="multipart/form-data">
+    <button type="submit" class="btn btn-danger form-control">Clear All Previous Run</button>
+  </form>
+  
+  <form method ="POST" action="/" enctype="multipart/form-data">
+    <button type="submit" class="btn btn-sucess form-control">Back to Add New Algorithm</button>
+  </form>
+</div>
+</body>
+
+{% endblock %}~

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+{% if name %}
+Thanks for submitting your name, {{ name }}!
+{% endif %}
+
+
+
+<form action="/sortingalgoselection">
+  <h3 style="color:rgb(106, 56, 156);font-style:italic;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Select your option from Algorithm:</h2>
+  <select id="sort" name="sort" class="selectpicker show-menu-arrow form-control">
+    <option value="selection">Choose your Algorithm</option>
+    <option value="bubble">BUBBLE SORT</option>
+    <option value="insertion">INSERTION SORT</option>
+    <option value="selection">SELECTION SORT</option>
+    <option value="merge">MERGE SORT</option>
+    <option value="heap">HEAP SORT</option>
+    <option value="quick">QUICK SORT</option>
+    <option value="quick3">QUICK SORT with median 3</option>
+  </select>
+  <br></br>
+  <input type="submit" class="btn btn-success">
+</form>
+
+{% endblock %}~

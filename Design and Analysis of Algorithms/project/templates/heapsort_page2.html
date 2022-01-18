@@ -1,0 +1,39 @@
+
+{% extends "base.html" %}
+
+{% block app_content %}
+
+{% if name %}
+Thanks for submitting your name, {{ name }}!
+{% endif %}
+
+
+<script>
+  function validateForm() { 
+  // alert("Array Length does not match ");
+  var r = arr.value; 
+  // alert()
+  var count = (r.match(/,/g)).length; 
+  var oVal = op.value; 
+  // alert(oVal)
+  if (count != oVal-1) {
+    alert("Array Length does not match ");
+    return false;
+  }
+} 
+
+</script>
+<h1 >"HEAP SORT ALGORITHM":</h1>
+<h2>Please enter the values below:</h2>
+
+  <div> 
+    <form method ="POST" action="/heap_sort_form2" enctype="multipart/form-data" onsubmit="return validateForm()" >
+      <label>Sample: 1,2,3,4</label><br>
+      <input type="hidden" id="op" name="op" value={{output}} ><br>
+      <input class="form-control form-control-lg" type="text" id="arr" name="arr"  pattern="^[0-9,]+$" ><br>
+      <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+
+{% endblock %}~

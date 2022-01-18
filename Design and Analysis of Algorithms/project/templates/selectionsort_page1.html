@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+{% if name %}
+Thanks for submitting your name, {{ name }}!
+{% endif %}
+
+<script>
+  function validateForm() {
+    var numx = num.value;
+    
+    if (numx == "") {
+      alert("Input must be filled out");
+      return false;
+    }
+   
+  }
+  function validateForm2() {
+    var numy = field1.value;
+    var numz = field2.value;
+    var numw = field3.value;
+
+    if(numy == "" || numz == "" || numw == "") 
+    {
+      alert("Input must be filled out");
+      return false;
+    }
+  }
+  </script>
+<h1>"SELECTION SORT":</h1>
+<h2>Please enter the length of Array:</h2>
+  <div> 
+    <form method ="POST" action="/selectionpage2form" enctype="multipart/form-data" onsubmit="return validateForm()">
+      <label >Enter Size of the Array:</label><br>
+      <input class="form-control form-control-lg" type="text" id="num" name="num" ><br>
+      <button type="submit" class="btn btn-success">Shoot</button>
+  </form>
+</div>
+
+<div style="margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 3px solid rgba(0, 0, 0, 0.1);"></div>
+
+<h2>Random Number Generator:</h2>
+  <div> 
+    <form method ="POST" action="/selectionRandomform" enctype="multipart/form-data" onsubmit="return validateForm2()">
+      <label >Please enter size of auto generated array:</label><br>
+      <input class="form-control form-control-lg" type="text" id="field1" name="field1"  pattern="^[0-9]+$"><br>
+      <label>Start value:</label><br>
+      <input class="form-control form-control-lg" type="text" id="field2" name="field2" pattern="^[0-9]+$" ><br>
+      <label>Last value:</label><br>
+      <input class="form-control form-control-lg" type="text" id="field3" name="field3" pattern="^[0-9]+$" ><br>
+      <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+  </div>
+  {% endblock %}~
