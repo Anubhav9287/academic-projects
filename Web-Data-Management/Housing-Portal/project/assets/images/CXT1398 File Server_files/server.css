@@ -1,0 +1,148 @@
+/* <!-- 
+    Name: Chinmaya Tripathi
+    UTA ID: 1001851398
+    Net ID: cxt1398
+ --> */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #0d0d0d;
+}
+
+.container-fluid {
+    border-radius: 5px;
+    /* width: 600px; */
+    margin: auto;
+    background: black;
+    text-align: center;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.header {
+    padding: 20px;
+}
+
+.btn {
+    background-color: purple;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 25px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+}
+
+.form-control p {
+    padding: 0px 0px 20px;
+}
+
+#username {
+    width: 300px;
+    height: 25px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.header p {
+    color: green;
+}
+
+#error p {
+    color: red;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+#error {
+    display: none;
+}
+
+.log {
+    float: right;
+}
+
+.users {
+    float: left;
+}
+
+.sidediv {
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    width: 350px;
+    height: 280px;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+.sidediv h3 {
+    padding-top: 5px;
+}
+
+.sidediv p {
+    padding-top: 5px;
+}
+
+.sidedivv {
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    height: 280px;
+    padding: 5px;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+.sidedivv h3 {
+    padding-top: 5px;
+}
+
+.sidedivv p {
+    padding-top: 5px;
+}
+
+#users li {
+    padding-top: 10px;
+    color: green;
+}
+
+.log p {
+    color: orangered;
+}
+
+
+/* CSS Loader  */
+.loader {
+    border: 16px solid #b80303;
+    border-top: 16px solid white; 
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin:auto;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

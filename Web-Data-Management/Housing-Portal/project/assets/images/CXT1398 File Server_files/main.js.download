@@ -1,0 +1,219 @@
+// <!-- 
+//     Name: Chinmaya Tripathi
+//     UTA ID: 1001851398
+//     Net ID: cxt1398
+//  -->
+
+/* This is the main client side JS file which holds the functionality to socket connection and its responses
+does the dynamic changes insite the DOM accordingly. */
+
+// Getting the div elements from the DOM which are to be dynamically changed in future.
+const userList = document.getElementById('users'); // to display users list
+const ERROR = document.getElementById('error'); // to display error
+const ERR = document.getElementById('abcd'); // to display error
+const file_upload = document.getElementById('fileuploaddiv'); // file upload form
+const loader = document.getElementById('loader'); // div that holds loader
+const log = document.getElementById('log'); // div that dusplays user logs
+const users = document.getElementById('users'); // to display users logs
+const wordList = document.getElementById("wordlist");
+
+let lexiconWords = [];
+
+
+// Getting the username from the URL with the help of query string 
+// plugin mentioned inside the index.html file.
+const {
+    username
+} = Qs.parse(location.search, {
+    ignoreQueryPrefix: true
+});
+
+
+/**Initializing the socketIO instance client side */
+const socket = io();
+
+// Emiting the message to server from client side and giving client's name to server to validate and add
+// inside the server room.
+socket.emit('joinroom', {
+    username
+});
+
+// Listening the 'message' command recieved from the server side along with the message came from the backend.
+socket.on("message", msg => {
+    // Calling the output message and passing the message along as an argument to display
+    outputMessage(msg);
+})
+
+// Listening to error from the server side, If yes, calling the showError function along with message 
+// recieved from the server side.
+socket.on("ERROR", msg => {
+    showError(msg);
+})
+
+// Listening to 'roomusers' command which broadcasts the message telling how many 
+// users are present currently at the server.
+socket.on('roomUsers', ({
+    room,
+    users
+}) => {
+    outputUsers(users);
+});
+
+
+// Function to show the error div along with the message passed inside the arguments
+function showError(obj){
+    showFileUpload(false); //Hiding the file upload div dynamically
+    // Extracting the message and its type
+    let msg = obj.msg;
+    let c = obj.code;
+    // Defining styles and showing the error message.
+    loader.style.display="none";
+    log.style.display="none";
+    users.style.display="none";
+    ERROR.style.display = 'block';
+    ERR.innerText = msg;
+
+}
+
+// Output message to DOM and let users know what's happening.
+function outputMessage(obj) {
+    // Extracting the message from server side.
+    let code = obj.code;
+    let msg = obj.msg;
+    // Show the upload form 
+    showFileUpload(true);
+    // Getting the elements of the DOM and siplaying dynamically.
+    const div = document.createElement('div');
+    div.classList.add('message');
+    const para = document.createElement('p');
+    para.classList.add('text');
+    para.innerText = msg;
+    // Displaying message color as per its type.
+    if(code === "green"){
+        para.style.color = "green";
+    }
+    else if(code === "orange"){
+        para.style.color = "orangered";
+    }
+    else if(code === "red"){
+        para.style.color = "red";
+    }
+    div.appendChild(para);
+    document.querySelector('.chat-messages').appendChild(div);
+}
+
+
+// Function to hide or show the file upload form inside the DOM
+function showFileUpload(flag){
+    // If true display form
+    if(flag){
+    loader.style.display = "none";
+    file_upload.style.display = 'block';
+    }
+    // If false, hide it
+    else{
+        loader.style.display = "none";
+        file_upload.style.display = 'none';
+    }
+}
+
+// Function to add users to the DOM div
+function outputUsers(users) {
+    userList.innerHTML = '';
+    users.forEach(user => {
+        const li = document.createElement('li');
+        li.innerText = user.username;
+        userList.appendChild(li);
+    });
+}
+
+//JQuery to dynamically validate the form and check for the file type uploaded
+// and to check the whether the file uploaded or not.
+$('#myform').on('submit', function () {
+    // Checking if the file even uploaded or not
+    if(filename.files.length < 1){
+        alert("Please select a file");
+        return false;
+    }
+    // Checking the file extension and throwing error in case extension dosen't match with required one.
+    let ext = (filename.files[0].name).split(".")[1];
+    if(ext === "txt" || ext === "doc" || ext === "docx"){
+        loader.style.display = "block";
+        // To show the user the loader for process
+        setTimeout(function(){ 
+            loader.style.display = "none";
+        }, 3000);
+        return true;
+    }
+    else {
+        alert(`.${ext}, wrong extension.
+               Make sure to Upload a .txt Extension file`);
+        return false;
+    }
+});
+
+function displayWordList(lexiconWords){
+
+    let list = `<ul>`;
+
+    for(let i in lexiconWords){
+        list += `<li style="color:white;">${lexiconWords[i]}</li>`;
+    }
+    list += '</ul>';
+
+    $("#wordlist").empty().append(list);
+
+}
+
+
+function refreshWordList(list){
+    console.log(list);
+    let li = `<ul>`;
+
+    for(let i in lexiconWords){
+        if(list.includes(lexiconWords[i])){
+            li += `<li style="color:green;">${lexiconWords[i]}</li>`;
+        }
+        else{
+            li += `<li style="color:red;">${lexiconWords[i]}</li>`;
+        }
+    }
+    li += '</ul>';
+
+    $("#addedwordlist").append(li);
+    lexiconWords = [];
+    displayWordList(lexiconWords);
+
+}
+
+function pickWordList() {
+    setInterval(function(){
+        //Check if the queue is not empty!
+        // create a alrt whenever a poll is made by server!
+        let lexi = lexiconWords;
+        if(lexi.length > 0){
+            alert("Server just polled your Queue...");
+            fetch('/addword', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(lexi),
+                })
+                .then(response => response.json())
+                .then((response) => {
+                    refreshWordList(response);
+                })
+        }
+    }, 10000);
+  }
+
+$('#addwords').on('submit', function () {
+    event.preventDefault();
+    let wordd = word.value;
+    lexiconWords.push(wordd);
+    displayWordList(lexiconWords);
+});
+
+pickWordList();
+

@@ -1,0 +1,403 @@
+/*
+
+A -> Anubhav Sharma -> 1001864635
+C -> Chinmaya Tripathi -> 1001851398
+K -> Khush Hemantkumar Upadhyay -> 1001858988
+
+*/
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.banner{
+    position: relative;
+    width: 100;
+    height: 120px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+}
+.banner .header-content{
+    max-width: 750px;
+    position: relative;
+    text-align: center;
+}
+
+.banner .header-content h2{
+    font-size: 60px;
+    color:#fff;
+}
+
+.banner .header-content p{
+    font-size: 18px;
+    color:#fff;
+}
+
+.banner header{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.banner header .logo{
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.banner header .toggleDiv{
+    position: relative;
+}
+
+.banner header .toggleDiv ul{
+    list-style: none;
+}
+
+.banner header .toggleDiv ul li{
+    display: inline;
+    padding-right: 25px;
+}
+
+.banner header .toggleDiv ul li a{
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color:#fff
+}
+
+.header-content .start{
+    height: 60px;
+    width:300px;
+    cursor: pointer;
+    font-size: 20px;
+    border:none;
+    color:white;
+    background: black;
+    border:1px solid white;
+    margin-top: 20px;
+}
+
+.about{
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.about .content-box{
+    background: #162c3b;
+    padding: 100px;
+    width: 50%;
+}
+.heading{
+    color:#fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.para{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.about .image-box{
+    background: url("../images/block-1.jpg");
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.services{
+    background-color: #12222d;
+    padding: 100px;
+    text-align: center;
+}
+
+.services .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.services .container .service-box{
+    position: relative;
+    background-color: #fff;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yellow{
+    color:yellow;
+}
+.login-btn{
+    width: 100px;
+    height:35px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+.services .container .service-box img{
+    max-width: 250px;
+}
+
+.services .container .service-box h2{
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.tech{
+    background-color: #3f8ffc;
+    padding: 100px;
+    padding-top: 300px;
+    margin-top: -300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tech .content-box{
+    max-width: 800px;
+}
+
+.tech .image-box{
+    max-width: 250px;
+}
+
+.tech .image-box img{
+    max-width: 100%;
+}
+
+.modes{
+    background: #162c3b;
+    padding: 100px;
+    text-align: center;
+}
+
+.modes .image-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.modes .image-box img{
+    margin: 20px;
+    max-width: 200px;
+    opacity: 0.25;
+    cursor: pointer;
+}
+
+.modes .image-box img:hover{
+    opacity: 1;
+}
+
+.contact{
+    padding: 100px;
+    background-color: #162c3b;
+    text-align: center;
+}
+
+.image-form{
+
+    background: url("../images/block-1.jpg");
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+}
+.bg-red{
+    background-color: darkmagenta !important;
+    padding: 100px;
+    width: 50%;
+}
+.form .input-box input{
+    margin-bottom: 40px;
+    background: transparent;
+    box-shadow: none;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.form .input-box input::placeholder{
+   color:#fff 
+}
+
+.form .input-box textarea{
+    margin-bottom: 40px;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    min-height: 150px;
+    border-bottom: 2px solid #fff;
+}
+
+.form .input-box textarea::placeholder{
+   color:#fff 
+}
+
+.form .input-box input[type="submit"]{
+    width: 150px;
+    background-color: #fff;
+    color:#111;
+    cursor: pointer;
+    font-weight: 400px;
+}
+
+.footer{
+    background:#162c3b;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer ul li{
+    list-style: none;
+}
+
+.footer ul li a i{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    color: white;
+}
+
+.fas{
+    color: white;
+}
+
+@media (max-width: 991px){
+    .banner header{
+        padding: 20px 50px;
+    }
+    .banner .header-content h2{
+        font-size: 36px;
+    }
+    .banner .header-content p{
+        color: #fff;
+        font-size: 16px;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about .content-box,
+    .about .image-box{
+        width: 100%;
+        padding:10px;
+        min-height: 400px;
+        text-align: center;
+    }
+    .services{
+        padding: 50px;
+    }
+    .services .container{
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .services .container .service-box{
+        margin:20px;
+        width:300px;
+        height:350px;
+    }
+    .tech{
+        padding: 50px;
+        padding-top:300px;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .tech .image-box{
+        margin-top: 40px;
+        max-width: 250px;
+    }
+    .modes{
+        padding:50px;
+    }
+    .modes .image-box{
+        justify-content: center;
+    }
+    .contactt{
+        padding: 50px;
+    }
+    .footer{
+        padding: 20px 50px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .footer ul{
+        margin-bottom: 20px;
+    }
+    .banner header{
+        flex-direction: column;
+    }
+    .banner header .toggleDiv ul li{
+        display: block;
+        line-height: 20px;
+    }
+    .banner header .toggleDiv ul{
+        margin-top: 15px;
+    }
+    .header-content .start{
+        height: 40px;
+        width:200px;
+        cursor: pointer;
+        font-size: 10px;
+        border:none;
+        color:white;
+        background: black;
+        border:1px solid white;
+    }
+    .header-content{
+        margin-top:40%;
+    }
+    .banner{
+        height:250px;
+    }
+}
+
